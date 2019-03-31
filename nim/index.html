@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title>Twitter API</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script type="text/javascript">
+        $(document).ready(function(){
+            $('#enter').click( function() {
+               //var str = $('#hashtag').text();
+                var str = $('#hashtag').val();
+                $("#results").load('get_tweets.php?hashtag='+str);
+            })
+        });
+	</script>
+</head>
+<body>
+	<div>
+		<!--<form name="twitter_form" method="get" action="get_tweets.php">-->
+			Search Hashtag :
+			<input type="text" id="hashtag" name="hashtag">
+			<input type="submit" id="enter" name="get_tweets.php">
+		<!--</form>-->
+	</div>
+	<div id="results">
+
+	</div>
+		
+	<script type="text/javascript" src="js/scripts.js"></script>
+</body>	
+</html>
