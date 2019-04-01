@@ -1,49 +1,46 @@
-window.onload = init;
-
-function init() {
-
-    var query;
+function getTweets(t){
+    var xhr = new XMLHttpRequest();
     var input = document.getElementById("query");
+    var query = input.value;
 
-    input.addEventListener("keypress", function(e){
-        if (e.key == "Enter") {
-            query = input.value;
-            console.log(query);
-            getTweets();
-        }
-    })
 
-    function getTweets(){
-
-	var xhr = new XMLHttpRequest();
     xhr.open('GET', 'get_tweets.php?q='+ query, true); //this changes the state of xmlhttp
-    xhr.send(null);
+    xhr.send();
 
-    xhr.onload = function() {
+    xhr.onreadystatechange = function() {
 
-        console.log(xhr)
-
-    	if(xhr.status == 200){
+        if(xhr.status === 200){
 
             var tweets = JSON.parse(xhr.responseText);
-            
+
             tweets = tweets.statuses;
 
-            console.log(tweets);
+            var view = '';
             //  EXAMPLE OUTPUT TO A LIST
-            var tweetList = "<ul>";
+            view += "<table class='table' border='0'><tr><th class='head1'>DATE</th><th class='head2'>tweet</th><th class='head3'>Name</th><th class='head4'>Profile Image</th></tr>";
             tweets.forEach(function(tweet) {
-                tweetList += "<li>" + tweet.text + "</li>";
-            });
-            tweetList += "</ul>"
+                if (tweet.text.length > 5) {
+                    var d = tweet.created_at.replace("+0000", "");
+                    view += "<tr>";
+                    view += "<td class='date'>" + d + "</td>";
+                    view += "<td class='tweet'>" + tweet.text + "</td>";
+                    view += "<td class='name'>" + tweet.user.name + "</td>";
+                    view += "<td><img src='" + tweet.user.profile_image_url + "'/></td>";
+                    view += "</tr>";
+                }
 
-    		document.getElementById("results").innerHTML = tweetList;
-    		
-    	} else {
+
+            });
+            view += "</table>";
+
+            document.getElementById("results").innerHTML = view;
+            document.getElementById("logo").setAttribute("style","opacity:0.1; -moz-opacity:0.5; filter:alpha(opacity=50)");
+
+
+
+        } else {
             console.log(xhr);
-                   document.getElementById("results").innerHTML = xhr.responseText; 
+            document.getElementById("results").innerHTML = xhr.responseText;
         }
     }
-}
-
 }

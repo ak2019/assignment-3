@@ -1,13 +1,135 @@
-figure {
-	width: 20%;
-	float: left;
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Delius');
+
+
+
+body {
+	background-color: #00acee;
+	font-family: 'Delius', cursive;
+
 }
 
-figure img {
+.container{
+	display:block;
+	height:100vh;
+	position: absolute;
+	top:100;
+	bottom:0;
 	width: 100%;
 }
 
-figcaption {
-	text-align: right;
+.search{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 88px;
+	text-align: center;
+	color: white;
+	height: 20px;
 }
+
+input{
+	position: relative;
+	width: 560px;
+	height: 50px;
+	text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+button{
+	display: block;
+	margin-top: 20px;
+	width: 100px;
+	height: 35px;
+	margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+
+
+.head1{
+	color: black;
+	text-transform: uppercase;
+	background-color: white;
+	width: 50px;
+}
+
+.head2{
+	color: black;
+	text-transform: uppercase;
+	background-color: white;
+	width: 100px;
+}
+
+.head3{
+	color: black;
+	text-transform: uppercase;
+	background-color: white;
+	width: 60px;
+}
+
+.head4{
+	color: black;
+	text-transform: uppercase;
+	background-color: white;
+	width: 10px;
+}
+
+.copyright{
+	color: #00acee;
+	font-family: 'Abel', sans-serif;
+	font-size: 20px;
+	text-align: center;
+	line-height: 1px;
+}
+
+#logo {
+	position: fixed;
+}
+
+#result {
+	position: absolute;
+}
+
+.table{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	width: 80%;
+	margin-bottom: 200px;
+}
+
+.date{
+	color: white;
+	width: 15%;
+}
+
+.tweet{
+	color: white;
+	width: 80%;
+}
+
+.name {
+	color: white;
+	width: 15%;
+}
+
+footer{
+	width: 100%;
+	bottom: 0px;
+	position: fixed;
+	height: 80px;
+	background-color: white; 
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+
 

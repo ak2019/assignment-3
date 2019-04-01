@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="js/scripts.js"></script>
 	<title>Twitter API</title>
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<input type="text" id="query">
-
-	<div id="results">
+	<div class="container">
+	<header>
+			<p class="search">SEARCH HASHTAG</p>
+			<input type="text" id="query" name="query">
+			<button name="send" value="send" onclick="getTweets()">GET</button>
+	</header>
+	<div>
+		<img id="logo" src="img/logo2.png">
+		<div id="results"></div>
 	</div>
-		
+
+	<footer>
+		<div class="copyright">
+			<p>Created by Ali Khorshidnam</p>
+			<p>Instructor: Christine Clark</p>
+			<p>nmed 3720 &copy; 2019 </p>
+		</div>
+	</footer>
+</div>
 	<script type="text/javascript" src="js/scripts.js"></script>
 </body>	
 </html>
