@@ -1,22 +1,27 @@
-# 3720 Twitter API Example
+# 3720 Assignment 3
 
-This project works with the wonderful PHP Wrapper [TwitterAPIExchange.php](https://github.com/j7mbo/twitter-api-php) by [James Mallison](https://www.j7mbo.com/) (J7mbo) 
+## Project Objective:
+* Get data from Twitter API
+* Add JavaScript to the data and render in HTML
+* CSS design for the output
 
-## Get Validated:
-* Create a [Twitter App](https://developer.twitter.com/en/apps)
-* use a domain name you own as the Website URL (won't be an issue for local hosting)
-* generate keys and tokens
+## Compatibility:
+* The script will not render on MACOSX (AMPSS) application. 
 
-## Update and Run Code
-* update credentials in get_tweets.php with keys and tokens from Twitter App
-* set $URL endpoint and $getfield methods in get_tweets.php
-* run the project from a local server
-* examine data and determine what to pull and how to display it
 
-## Running Twitter Wrapper with UwAmp
-To use with UwAmp, you must update the CURL certificate (no need to do this if you're running MAMP)
-1. Run UwAmp
-2. Click on page icon next to PHP Config button 
-3. Search for curl.cainfo
-4. Delete the semicolon at the start of the line and update the line to read: `curl.cainfo = "C:\Curl\cacert.pem"`
-5. Save the file
+## Live version:
+https://alik.graphics/3720
+
+## Description:
+The script is simply grabs data from Twitter and show on the screen.
+
+Input is what user want to search. The script will run for any hashtag according to the user' input.
+Output is: 
+1. Date
+2. User Profile picture:
+3. Tweet including the hashtag (user input)
+4. Username
+
+Since the program is so small I focused on design to create a better look for this simple function by using fixed header and footer and a simple table in center where data shows up. The search textarea is fixed on the top of the screen so users can search for other hashtags without refresh or going back.
+
+All the codes are either from class or by me.

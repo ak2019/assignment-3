@@ -17,15 +17,15 @@ function getTweets(t){
 
             var view = '';
             //  EXAMPLE OUTPUT TO A LIST
-            view += "<table class='table' border='0'><tr><th class='head1'>DATE</th><th class='head2'>tweet</th><th class='head3'>Name</th><th class='head4'>Profile Image</th></tr>";
+            view += "<table class='table' border='0'><tr><th class='head1'>DATE</th><th class='head2'>Image</th><th class='head3'>tweet</th><th class='head4'>Name</th></tr>";
             tweets.forEach(function(tweet) {
                 if (tweet.text.length > 5) {
                     var d = tweet.created_at.replace("+0000", "");
                     view += "<tr>";
                     view += "<td class='date'>" + d + "</td>";
+                    view += "<td class='profImage'><img src='" + tweet.user.profile_image_url + "'/></td>";
                     view += "<td class='tweet'>" + tweet.text + "</td>";
                     view += "<td class='name'>" + tweet.user.name + "</td>";
-                    view += "<td><img src='" + tweet.user.profile_image_url + "'/></td>";
                     view += "</tr>";
                 }
 
@@ -35,7 +35,6 @@ function getTweets(t){
 
             document.getElementById("results").innerHTML = view;
             document.getElementById("logo").setAttribute("style","opacity:0.1; -moz-opacity:0.5; filter:alpha(opacity=50)");
-
 
 
         } else {
