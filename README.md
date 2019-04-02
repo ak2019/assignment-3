@@ -24,4 +24,8 @@ Output is:
 
 Since the program is so small I focused on design to create a better look for this simple function by using fixed header and footer and a simple table in center where data shows up. The search textarea is fixed on the top of the screen so users can search for other hashtags without refresh or going back.
 
+## Copyright:
 All the codes are either from class or by me.
+
+## Configuration:
+GitHub givs error for API keys. So I have to remove them. Will be uploaded in Moodle.
